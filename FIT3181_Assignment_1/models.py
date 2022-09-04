@@ -64,6 +64,7 @@ class AnimalsDatasetManager:
         self.labels= label_encoder.transform(self.labels)
         self.data= self.data.astype("float") / 127.5 - 1 # standardize pixel value to range [-1, 1]
         self.classes= label_encoder.classes_
+        print("WTF IS THIS")
     
     def train_valid_test_split(self, train_size=0.8, test_size= 0.1, rand_seed=33):
         valid_size = 1 - (train_size + test_size)
