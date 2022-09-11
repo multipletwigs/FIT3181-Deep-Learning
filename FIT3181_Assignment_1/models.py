@@ -54,7 +54,7 @@ class AnimalsDatasetManager:
                     print("Processed {}/{}".format(i+1, max_num_images))
                 if i+1 >= max_num_images:
                     break
-        self.data= np.array(data)
+        self.data= np.array(data, dtype='float32')
         self.labels= np.array(labels)
         self.train_size= int(self.data.shape[0])
     
