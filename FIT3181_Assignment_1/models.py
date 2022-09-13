@@ -21,8 +21,8 @@ class SimplePreprocessor:
     def preprocess(self, image):
         try:
             image= cv2.resize(image, (self.width, self.height), interpolation = self.inter)
-            b,g,r= cv2.split(image)
-            image= cv2.merge((r,g,b))
+            # b,g,r= cv2.split(image)
+            # image= cv2.merge((r,g,b))
             return image
         except Exception:
             pass
